@@ -106,6 +106,34 @@
       height: 3px;
       background: linear-gradient(90deg, transparent, #e63030, transparent);
     }
+
+    .dog-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 2rem;
+      background: #111;
+    }
+
+    .dog-section img {
+      width: min(420px, 90vw);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-12px); }
+    }
+
+    .dog-caption {
+      margin-top: 1.2rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body>
@@ -124,5 +152,13 @@
     </div>
     <div class="bar"></div>
   </section>
+
+  <div class="dog-section">
+    <img
+      src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&q=80"
+      alt="cute golden retriever"
+    />
+    <p class="dog-caption">Official GYM OS Mascot</p>
+  </div>
 </body>
 </html>
