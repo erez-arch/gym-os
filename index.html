@@ -80,6 +80,34 @@
       text-transform: uppercase;
     }
 
+    .dog-hero {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .dog-hero img {
+      width: min(200px, 45vw);
+      border-radius: 50%;
+      border: 3px solid rgba(230,48,48,0.4);
+      box-shadow: 0 0 40px rgba(230,48,48,0.2);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    .dog-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+    }
+
     .badge {
       display: inline-block;
       margin-top: 2.5rem;
@@ -107,33 +135,6 @@
       background: linear-gradient(90deg, transparent, #e63030, transparent);
     }
 
-    .dog-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 4rem 2rem;
-      background: #111;
-    }
-
-    .dog-section img {
-      width: min(420px, 90vw);
-      border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50%       { transform: translateY(-12px); }
-    }
-
-    .dog-caption {
-      margin-top: 1.2rem;
-      font-size: 0.9rem;
-      letter-spacing: 0.2em;
-      color: rgba(255,255,255,0.4);
-      text-transform: uppercase;
-    }
   </style>
 </head>
 <body>
@@ -148,17 +149,20 @@
       <p class="kanji">ジム・オペレーティングシステム</p>
       <h1>GYM OS</h1>
       <p class="subtitle">Train Smarter &nbsp;·&nbsp; Perform Better</p>
+
+      <div class="dog-hero">
+        <img
+          src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80"
+          alt="golden retriever mascot"
+        />
+        <span class="dog-label">Official Mascot</span>
+      </div>
+
       <span class="badge">Coming Soon</span>
     </div>
     <div class="bar"></div>
   </section>
 
-  <div class="dog-section">
-    <img
-      src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800&q=80"
-      alt="cute golden retriever"
-    />
-    <p class="dog-caption">Official GYM OS Mascot</p>
-  </div>
+
 </body>
 </html>
