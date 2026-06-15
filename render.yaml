@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: gym-os
+    runtime: static
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: false
